@@ -17,11 +17,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    let homeVC = ViewController()
     
     @IBAction func onLoginTap(_ sender: Any) {
         
         let email = emailField.text ?? ""
         let password = passwordField.text ?? ""
+        
 
 //        MARK: Validate if fields aren't empty
         
@@ -51,6 +53,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayoutConfig()
+        self.navigationItem.setHidesBackButton(true, animated: false)
+   
+        
     }
     
     func setLayoutConfig() {
@@ -64,3 +69,4 @@ class LoginViewController: UIViewController {
     }
 }
       
+

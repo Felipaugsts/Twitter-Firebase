@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 class tweetViewModel {
     
@@ -22,5 +23,27 @@ class tweetViewModel {
                         "avatar": "person"
         ])
         Completion(true)
+    }
+    
+    static func Logout(com: @escaping (Bool) -> ()) {
+                    let firebaseAuth = Auth.auth()
+                do {
+                  try firebaseAuth.signOut()
+                    com(true)
+                } catch let signOutError as NSError {
+                  print("Error signing out: %@", signOutError)
+                }
+    }
+    
+    static func isUserLogged(completion: @escaping (AnyObject) ->()) {
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+
+              if let user = user {
+                  completion(user)
+              } else {
+                return
+              }
+          
+      }
     }
 }

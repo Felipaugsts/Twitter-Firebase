@@ -10,7 +10,9 @@ import Firebase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+
 class ViewController: UIViewController {
+
 
     let database = Firestore.firestore()
     var allTweets: [tweetModel] =  []
@@ -22,10 +24,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.uturn.backward.circle.badge.ellipsis"),
+            style: .done,
+            target: self,
+            action: #selector(didtapMenuButton))
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        getData()
+        tweetViewModel.isUserLogged(completion: {Result in
+            if Result != nil {
+                self.getData()
+            } else {
+                self.didtapMenuButton()
+            }
+        })
+        
+    }
+    
+    @objc private func didtapMenuButton() {
+        tweetViewModel.Logout(com: {(Result) in
+            print("signout")
+            let homeViewController = self.storyboard?.instantiateViewController(identifier: "LoginViewController") as? LoginViewController
+        
+            self.navigationController?.pushViewController(homeViewController!, animated: true)
+        })
     }
 
     

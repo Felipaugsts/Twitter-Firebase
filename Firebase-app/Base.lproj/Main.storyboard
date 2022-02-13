@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="Q2g-qM-ZYQ">
             <objects>
-                <viewController id="3Z3-Hl-OhD" customClass="LoginViewController" customModule="Firebase_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="3Z3-Hl-OhD" customClass="LoginViewController" customModule="Firebase_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zTn-i4-97q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWB-w1-PST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213.04347826087" y="-215.625"/>
+            <point key="canvasLocation" x="1987" y="-218"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Bt5-bJ-eui">
@@ -237,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-Db-iEQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="419" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yeq-fq-v14">
                                     <size key="itemSize" width="414" height="149"/>
@@ -247,7 +247,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Ja7-Fs-nnU" customClass="FeedCollectionViewCell" customModule="Firebase_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
+                                        <rect key="frame" x="2.5" y="0.0" width="414" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2sa-I7-DDi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
@@ -265,7 +265,7 @@
                                                                     <color key="tintColor" systemColor="labelColor"/>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="0.98554414690000003" green="0.98554414690000003" blue="0.98554414690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QVJ-WY-jU6">
                                                             <rect key="frame" x="114" y="0.0" width="300" height="149"/>
@@ -278,7 +278,7 @@
                                                                 </label>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9F-bl-ld2">
                                                                     <rect key="frame" x="0.0" y="20.5" width="275" height="128.5"/>
-                                                                    <color key="backgroundColor" red="0.98554414690000003" green="0.98554414690000003" blue="0.98554414690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore</string>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
@@ -292,7 +292,7 @@
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.9855441469134707" green="0.9855441469134707" blue="0.9855441469134707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="v61-FQ-KIz"/>
                                                         <constraint firstAttribute="width" constant="414" id="y3V-HP-jlT"/>
@@ -348,7 +348,7 @@
                             <constraint firstAttribute="trailing" secondItem="zec-nY-2L4" secondAttribute="trailing" constant="30" id="Af6-W2-dOB"/>
                             <constraint firstAttribute="bottom" secondItem="zec-nY-2L4" secondAttribute="bottom" constant="40" id="TCP-od-B1f"/>
                             <constraint firstItem="b4l-Db-iEQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZYy-rV-RGV"/>
-                            <constraint firstItem="b4l-Db-iEQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gcP-Y3-F3Y"/>
+                            <constraint firstItem="b4l-Db-iEQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="gcP-Y3-F3Y"/>
                             <constraint firstItem="b4l-Db-iEQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k6Q-gF-eYd"/>
                         </constraints>
                     </view>
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="-228"/>
+            <point key="canvasLocation" x="1228" y="-218"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Bu-WT-kmU">
