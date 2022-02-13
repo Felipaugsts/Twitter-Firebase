@@ -34,33 +34,14 @@ class AuthVM {
                         print("error", error)
                     }
                 }
+            Completion(true)
                 
-            
-                let sharedInstance = FirebaseSingleton.sharedInstance
-                                    
-                    sharedInstance.currentUser = user
-                    sharedInstance.currentUserID = user.uid
-                    sharedInstance.currentUserEmail = user.email
-                    sharedInstance.currentUserDisplayName = name
-                
-                    Completion(true)
-                
-                      } else {
-                          Completion(false)
-                      }
-                  }
+            } else {
+            Completion(false)
+            }
+        }
     }
 
 }
-class FirebaseSingleton{
 
-    static let sharedInstance = FirebaseSingleton()
-
-    var currentUser: User? = Auth.auth().currentUser
-    var currentUserID: String? = Auth.auth().currentUser?.uid
-    var currentUserEmail: String? = Auth.auth().currentUser?.email
-    var currentUserDisplayName: String? = Auth.auth().currentUser?.displayName
-    
-    
-}
 
