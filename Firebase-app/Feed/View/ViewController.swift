@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var FeedCollectionView: UICollectionView!
     
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         let db = Firestore.firestore()
         
         // Read the documents at a specific path
-        db.collection("Tweet").addSnapshotListener { (QuerySnapShot, error) in
+        db.collection("Tweets").addSnapshotListener { (QuerySnapShot, error) in
             guard let documents = QuerySnapShot?.documents else {
                 return
             }

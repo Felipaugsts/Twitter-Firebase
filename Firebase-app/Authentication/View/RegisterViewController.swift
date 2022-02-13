@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var PasswordRegister: UITextField!
     
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     @IBAction func onRegisterTap(_ sender: Any) {
         let name = NameRegister.text ?? ""
@@ -26,58 +27,38 @@ class RegisterViewController: UIViewController {
         let password = PasswordRegister.text ?? ""
         
         if name.isEmpty == false && email.isEmpty == false && password.isEmpty == false {
-            Auth.auth().createUser(withEmail: email, password: password) { AuthDataResult, Error in
-                if let user = AuthDataResult?.user {
-                    
-                    let sharedInstance = FirebaseSingleton.sharedInstance
-                                        sharedInstance.currentUser = user
-                                        sharedInstance.currentUserID = user.uid
-                                        sharedInstance.currentUserEmail = user.email // at this point is it possible for this to be nil?
-                                        sharedInstance.currentUserDisplayName = name
-                    
+            loader.startAnimating()
+            AuthVM.Register(email: email, password: password, name: name, Completion: { (Result) in
+                if Result == true {
                     
                     let alert = UIAlertController(title: "Accound created!", message: "\(name), Your accound has been created successfully", preferredStyle: UIAlertController.Style.alert)
-
-                    // add an action (button)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-                    // show the alert
                     self.present(alert, animated: true, completion: nil)
-                    
-                    
-                    
-                          } else {
-                              print("error")
-                          }
-                      }
+                    self.loader.stopAnimating()
+                } else if Result == false {
+                    print("error")
+                    self.loader.stopAnimating()
             }
+        })
+            
+        } else {
+            
+            if  email.isEmpty == true {
+                Utilities.isError(self.EmailRegister)
+            }
+            if password.isEmpty == true {
+                Utilities.isError(self.PasswordRegister)
+            }
+            if name.isEmpty == true {
+                Utilities.isError(self.NameRegister)
         }
-    
-
-    
+    }
+}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        layoutConfig()
-    }
-
-    func layoutConfig() {
         Utilities.styleFilledButton(registerButton)
     }
 }
 
 
-
-class FirebaseSingleton{
-
-    static let sharedInstance = FirebaseSingleton()
-
-
-    var currentUser: User? = Auth.auth().currentUser
-    var currentUserID: String? = Auth.auth().currentUser?.uid
-    var currentUserEmail: String? = Auth.auth().currentUser?.email
-    var currentUserDisplayName: String? = Auth.auth().currentUser?.displayName
-    
-    
-}

@@ -13,10 +13,10 @@
 		C59CD66927B7E57C0037F713 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CD66827B7E57C0037F713 /* LoginViewController.swift */; };
 		C59CD66B27B80AFC0037F713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CD66A27B80AFC0037F713 /* Constants.swift */; };
 		C59CD66E27B9339D0037F713 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CD66D27B9339D0037F713 /* AuthViewModel.swift */; };
+		C59CD67027B94B6A0037F713 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59CD66F27B94B6A0037F713 /* TweetViewController.swift */; };
 		C5A270A327B6B7AA0060B713 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A270A227B6B7AA0060B713 /* Utilities.swift */; };
 		C5A270A627B6B90E0060B713 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A270A527B6B90E0060B713 /* TweetViewModel.swift */; };
 		C5A270A927B6C04E0060B713 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A270A827B6C04E0060B713 /* TweetModel.swift */; };
-		C5A270AB27B6FDBA0060B713 /* NewTweetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A270AA27B6FDBA0060B713 /* NewTweetVC.swift */; };
 		C5ABCB5427B68EAB00476038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABCB5327B68EAB00476038 /* AppDelegate.swift */; };
 		C5ABCB5627B68EAB00476038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABCB5527B68EAB00476038 /* SceneDelegate.swift */; };
 		C5ABCB5827B68EAB00476038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABCB5727B68EAB00476038 /* ViewController.swift */; };
@@ -35,10 +35,10 @@
 		C59CD66827B7E57C0037F713 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C59CD66A27B80AFC0037F713 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C59CD66D27B9339D0037F713 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C59CD66F27B94B6A0037F713 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		C5A270A227B6B7AA0060B713 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C5A270A527B6B90E0060B713 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		C5A270A827B6C04E0060B713 /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
-		C5A270AA27B6FDBA0060B713 /* NewTweetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetVC.swift; sourceTree = "<group>"; };
 		C5ABCB5027B68EAB00476038 /* Firebase-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ABCB5327B68EAB00476038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5ABCB5527B68EAB00476038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				C5ABCB5727B68EAB00476038 /* ViewController.swift */,
-				C5A270AA27B6FDBA0060B713 /* NewTweetVC.swift */,
 				C5ABCB6727B6907100476038 /* FeedCollectionViewCell.swift */,
+				C59CD66F27B94B6A0037F713 /* TweetViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,8 +311,8 @@
 				C5ABCB6827B6907100476038 /* FeedCollectionViewCell.swift in Sources */,
 				C59CD66E27B9339D0037F713 /* AuthViewModel.swift in Sources */,
 				C5ABCB5627B68EAB00476038 /* SceneDelegate.swift in Sources */,
+				C59CD67027B94B6A0037F713 /* TweetViewController.swift in Sources */,
 				C59CD66927B7E57C0037F713 /* LoginViewController.swift in Sources */,
-				C5A270AB27B6FDBA0060B713 /* NewTweetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

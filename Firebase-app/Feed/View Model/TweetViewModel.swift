@@ -11,10 +11,16 @@ import FirebaseFirestore
 
 class tweetViewModel {
     
-    let database = Firestore.firestore()
-    
-    public func addNewTweet(_ tweet: String) {
-        let docRef = database.document("Tweets")
-        docRef.setData(["text": tweet])
+    static func addNewTweet(uid: String, username: String, avatar: String, text: String, Completion: @escaping (Bool) -> ()) {
+        let database = Firestore.firestore()
+       let id = database.collection("Tweets").document()
+        id.setData([
+                        "id": id.documentID,
+                        "userId": uid,
+                        "text": text,
+                        "username": username,
+                        "avatar": "person"
+        ])
+        Completion(true)
     }
 }

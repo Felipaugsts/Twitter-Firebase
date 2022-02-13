@@ -8,25 +8,36 @@
 import UIKit
 import FirebaseAuth
 
+import UIKit
+import FirebaseAuth
+
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func onLoginTap(_ sender: Any) {
         
         let email = emailField.text ?? ""
         let password = passwordField.text ?? ""
 
+//        MARK: Validate if fields aren't empty
+        
         if email.isEmpty == false && password.isEmpty == false {
-            print(email, password)
             loader.startAnimating()
+            
+//        MARK: Making post request and handling response
+            
             AuthVM.Login(email: email, password: password, completion: {(Result) in
                 print(Result)
                 if Result == true {
-                    print("passou")
+                    
+                    let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.ViewController) as? ViewController
+                
+                    self.navigationController?.pushViewController(homeViewController!, animated: true)
+                    
                 } else if Result == false {
                     self.setError()
                 }
@@ -36,9 +47,6 @@ class LoginViewController: UIViewController {
             self.setError()
         }
     }
-    
-    @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,4 +63,4 @@ class LoginViewController: UIViewController {
         Utilities.isError(self.passwordField)
     }
 }
-
+      
