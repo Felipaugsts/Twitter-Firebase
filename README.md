@@ -1,4 +1,6 @@
 # Twitter-Firebase
+**Demo Highlines** 
+- Using UIkit and firebase on this app you are able to create an account and add your "tweets" and it will be saved on Firestore associated with your UID
 
  - **Create an user and login in with Firebase Authentication**
 
