@@ -5,7 +5,7 @@
 - Tweets are being saved on Firestore with the ID associated with your UID
 
 
-**Code Highlines **
+**Code Highlines**
 
 - Using storyboard 
 - MVVM 
